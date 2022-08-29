@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav>
       <h1>CATBOOK</h1>
       <h1>
-        <Link to="/">Home</Link>
+       Not Registered? Click here to  <Link to="/">Register</Link>
       </h1>
       <h1>
         <Link to="/cats">Cats</Link>
