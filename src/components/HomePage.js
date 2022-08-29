@@ -12,7 +12,7 @@ const Posts = () => {
           to view our cats.{" "}
         </h1>
       </div>
-      <img className="homePagePhoto" src="/kittens.jpeg" />
+      <img id="homePagePhoto" src="/kittens.jpeg" />
     </div>
   );
 };

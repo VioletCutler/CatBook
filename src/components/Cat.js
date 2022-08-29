@@ -5,9 +5,12 @@ const Cat = ({ currentCatList, updateCatList }) => {
   const { id } = useParams();
   const [cat] = currentCatList.filter((cat) => cat.id == id);
 
-  const [catName, setCatName] = useState(cat.name);
+  const [catName, setCatName] = useState('');
 
   function handleSubmit(event) {
+    /* createPost({title, description, price, willDeliver})
+*/
+    
     event.preventDefault();
     cat.name = catName;
     const updatedCatList = currentCatList.map((currentCat) => {
@@ -33,7 +36,7 @@ const Cat = ({ currentCatList, updateCatList }) => {
         {cat.name} was born on {cat.birthdate}
       </p>
       <form onSubmit={handleSubmit}>
-        <input type="text" defaultValue={cat.name} onChange={handleChange} />
+        <input type="text" defaultValue={''} onChange={handleChange} />
         <input type="submit" value="Change Cats Name" />
       </form>
       <br />

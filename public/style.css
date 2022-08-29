@@ -6,6 +6,10 @@ body {
 
 .container {
     padding-left:2em;
+    padding-right:2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .pageHeader {
@@ -17,7 +21,7 @@ body {
 
 .cat {
     border-style: solid;
-    max-width: 15em
+    max-width: 15em;
 }
 
 nav {
@@ -37,8 +41,8 @@ nav {
     max-width:20em;
 }
 
-.homePagePhoto {
-    max-width: 35em;
+#homePagePhoto {
+    max-width: 10em;
 }
 
 .error {
@@ -46,8 +50,17 @@ nav {
     flex-direction: column;
 }
 
+#catApi {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .apiCat {
     border-style: double;
+    max-width: 10em;
+    max-height:10em;
 }
 
 .catList {
