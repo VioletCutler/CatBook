@@ -14,11 +14,11 @@ const CatApi = ({ apiCatList }) => {
               {cat.image ? (
                 <img className="catPhotos" src={cat.image.url} ></img>
               ) : (
-                <h1>Picture of a Cat</h1>
+                <p>Picture of a Cat</p>
               )}
-  
-              <h3>Origin: {cat.origin}</h3>
-              <h3>Temperment: {cat.temperament}</h3>
+              <Link to={`/cats/world/${cat.id}`}><p>Name : {cat.name}</p></Link>
+              <p>Origin: {cat.origin}</p>
+              <p>Temperament: {cat.temperament}</p>
             </div>
           );
         })}

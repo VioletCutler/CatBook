@@ -24,11 +24,6 @@ const Cat = ({ currentCatList, updateCatList }) => {
     updateCatList(updatedCatList);
   }
 
-  function handleChange(event) {
-    console.log(event.target.value)
-    setCatName(event.target.value);
-  }
-
   return (
     <div>
       <h1>{`Welcome to ${cat.name}'s page!`}</h1>
@@ -36,7 +31,7 @@ const Cat = ({ currentCatList, updateCatList }) => {
         {cat.name} was born on {cat.birthdate}
       </p>
       <form onSubmit={handleSubmit}>
-        <input type="text" defaultValue={''} onChange={handleChange} />
+        <input type="text" defaultValue={''} onChange={(e) => setCatName(e.target.value)} />
         <input type="submit" value="Change Cats Name" />
       </form>
       <br />
